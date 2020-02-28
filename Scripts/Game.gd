@@ -4,6 +4,9 @@ export var lives = 3
 export var score = 0
 var max_score = 0
 
+onready var brick = get_node("Brick Break")
+onready var life = get_node("Lost Life")
+
 var new_ball = preload("res://Scenes/Ball.tscn")
 
 
@@ -17,6 +20,7 @@ func _ready():
 func change_score(s):
 	score += s
 	$Score.update_score(score)
+	brick.play(0)
 	#if there are no more tiles, show the winning screen
 	#if len(get_tree().get_nodes_in_group("Tiles")) == 0:   <-this doesn't work
 	if score == 500:
@@ -25,6 +29,7 @@ func change_score(s):
 func change_lives(l):
 	lives += l
 	$Lives.update_lives(lives)
+	life.play(0)
 	#if there are no more lives show the game over screen
 	if lives <= 0:
 		get_tree().change_scene("res://Scenes/GameOver.tscn")

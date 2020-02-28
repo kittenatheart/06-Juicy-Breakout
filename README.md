@@ -1,8 +1,9 @@
 # 06-Juicy-Breakout
 
+Brick Breaker game implementing "juicy" features to make the game more interesting.
 
 
-Photo by Paweł Czerwiński on Unsplash
+Background photo by Paweł Czerwiński on Unsplash
 Music by Shannon Master
 
 

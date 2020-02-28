@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lost life.wav-6da9722e95a5a967158f846de1e210df.sample"
+
+[deps]
+
+source_file="res://Assets/lost life.wav"
+dest_files=[ "res://.import/lost life.wav-6da9722e95a5a967158f846de1e210df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -46,6 +46,7 @@ shape = SubResource( 1 )
 polygon = PoolVector2Array( 0, 632, 0, 0, 1024, 0, 1024, 632, 1064, 632, 1064, -40, -48, -40, -48, 632 )
 
 [node name="Tiles" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Tile Row 1" type="Node2D" parent="Tiles"]
 editor/display_folded = true

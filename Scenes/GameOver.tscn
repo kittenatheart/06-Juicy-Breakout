@@ -1,7 +1,54 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Assets/lose_background.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/game over.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/paddle returns.png" type="Texture" id=4]
+
+[sub_resource type="Curve" id=1]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 6.33601 ), 0.0, 1497.9, 0, 0, Vector2( 0.958065, 95.04 ), 1795.1, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.555556, 1 )
+colors = PoolColorArray( 0.382629, 1, 0.0703125, 1, 1, 1, 1, 1, 1, 0, 0.820313, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+min_value = -500.0
+max_value = 500.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0.0356596, 0.5088 ), 0.0, 2.31939, 0, 0, Vector2( 1, 0.5616 ), -2.13294, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3( 30, 30, 0 )
+angular_velocity = 0.0
+angular_velocity_curve = SubResource( 2 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+orbit_velocity_curve = SubResource( 6 )
+radial_accel = 20.0
+tangential_accel = 50.0
+scale = 2.0
+scale_curve = SubResource( 8 )
+color_ramp = SubResource( 4 )
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,4 +79,22 @@ margin_bottom = 304.0
 text = "Play Again?"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 496.006, 248.003 )
+scale = Vector2( 3, 3 )
+amount = 10
+process_material = SubResource( 9 )
+texture = ExtResource( 4 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 85.7794
+margin_top = 535.445
+margin_right = 374.779
+margin_bottom = 556.445
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.384314, 1, 0, 1 )
+text = "... you really think I'd let you play again??"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

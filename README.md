@@ -4,10 +4,25 @@ Brick Breaker game implementing "juicy" features to make the game more interesti
 
 
 Background photo by Paweł Czerwiński on Unsplash
-Music by Shannon Master
+Music and sound effects by Shannon Master
 
 
-
+1. back ground image
+2. win screen backrouns image
+3. lose screen background image
+4. comet trail on ball
+5. bricks color change
+6. background music
+7. lose life sound effect
+8. brick break sound effect
+9. lose life animation
+10. eyes on paddle
+11. mouth on paddle
+12. eyes moving
+13. mouth moving
+14. lose screen animation
+15. lose screen sound effect
+16. win screen animation
 
 
 

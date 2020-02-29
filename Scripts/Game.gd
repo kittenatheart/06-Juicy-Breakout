@@ -4,8 +4,10 @@ export var lives = 3
 export var score = 0
 var max_score = 0
 
+onready var music = get_node("Music")
 onready var brick = get_node("Brick Break")
 onready var life = get_node("Lost Life")
+var heart = load("res://Scenes/Heart.tscn")
 
 var new_ball = preload("res://Scenes/Ball.tscn")
 
@@ -16,6 +18,8 @@ func _ready():
 	$Lives.update_lives(lives)
 	for tile in get_tree().get_nodes_in_group("Tiles"):
 		max_score += tile.points
+	music.play(0)
+	$Timer.start()
 
 func change_score(s):
 	score += s
@@ -30,6 +34,9 @@ func change_lives(l):
 	lives += l
 	$Lives.update_lives(lives)
 	life.play(0)
+	var h = heart.instance()
+	get_node("/root/Game/Node2D").add_child(h)
+	h.emitting = true
 	#if there are no more lives show the game over screen
 	if lives <= 0:
 		get_tree().change_scene("res://Scenes/GameOver.tscn")
@@ -47,3 +54,8 @@ func make_new_ball(pos):
 	ball.linear_velocity = vector
 	add_child(ball)
 
+
+
+func _on_Music_timer_timeout():
+	music.play(0)
+	$Timer.start()

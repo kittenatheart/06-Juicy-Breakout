@@ -20,7 +20,7 @@ Music and sound effects by Shannon Master
 11. mouth on paddle
 12. eyes moving
 13. mouth moving
-14. lose screen animation
+14. lose screen animation - maybe
 15. lose screen sound effect
 16. win screen animation
 

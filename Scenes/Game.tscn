@@ -31,6 +31,7 @@ anchor_mode = 0
 current = true
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 544, 552 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -81,11 +82,10 @@ script = ExtResource( 6 )
 polygon = PoolVector2Array( 0, 632, 0, 0, 1024, 0, 1024, 632, 1064, 632, 1064, -40, -48, -40, -48, 632 )
 
 [node name="Tiles" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Tile Row 1" type="Node2D" parent="Tiles"]
 editor/display_folded = true
-modulate = Color( 0.141176, 0.0156863, 0.843137, 1 )
+modulate = Color( 0.627451, 0.490196, 0.898039, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 1" instance=ExtResource( 9 )]
 position = Vector2( 184, 296 )
@@ -119,7 +119,7 @@ position = Vector2( 832, 296 )
 
 [node name="Tile Row 2" type="Node2D" parent="Tiles"]
 editor/display_folded = true
-modulate = Color( 0.364706, 0.67451, 0.0784314, 1 )
+modulate = Color( 0.309804, 0.788235, 0.6, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 2" instance=ExtResource( 9 )]
 position = Vector2( 184, 256 )
@@ -153,7 +153,7 @@ position = Vector2( 832, 256 )
 
 [node name="Tile Row 3" type="Node2D" parent="Tiles"]
 editor/display_folded = true
-modulate = Color( 0.94902, 0.956863, 0.109804, 1 )
+modulate = Color( 0.470588, 0.254902, 1, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 3" instance=ExtResource( 9 )]
 position = Vector2( 184, 216 )
@@ -187,7 +187,7 @@ position = Vector2( 832, 216 )
 
 [node name="Tile Row 4" type="Node2D" parent="Tiles"]
 editor/display_folded = true
-modulate = Color( 1, 0.435294, 0.0470588, 1 )
+modulate = Color( 0.92549, 0.611765, 0.960784, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 4" instance=ExtResource( 9 )]
 position = Vector2( 184, 176 )
@@ -221,7 +221,7 @@ position = Vector2( 832, 176 )
 
 [node name="Tile Row 5" type="Node2D" parent="Tiles"]
 editor/display_folded = true
-modulate = Color( 0.905882, 0.0705882, 0.0705882, 1 )
+modulate = Color( 0.517647, 0.870588, 0.886275, 1 )
 
 [node name="Tile" parent="Tiles/Tile Row 5" instance=ExtResource( 9 )]
 position = Vector2( 184, 136 )
